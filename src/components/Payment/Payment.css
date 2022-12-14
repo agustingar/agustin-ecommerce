@@ -1,0 +1,84 @@
+.layout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .card{
+    display: grid;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #dadada;
+    justify-content: center;
+  }
+  .form-group{
+    display: grid;
+    padding:1rem
+  }
+
+
+ 
+.bot {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 3px;
+    height: 3em;
+    padding: 0 3em;
+    border: none;
+    background-color: #c41b54;
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 5px
+   }
+   
+   .bot::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background: rgb(196,27,84);
+    background: linear-gradient(90deg, rgba(196,27,84,1) 20%, rgba(124,7,46,1) 100%);
+    transition: 0.2s;
+   }
+   
+   .bot .label {
+    position: relative;
+   }
+   
+   .bot .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    top: 3em;
+    right: 0;
+    opacity: 0;
+    transition: 0.4s;
+   }
+   
+   .bot:hover::before {
+    height: 100%;
+   }
+   
+   .bot:hover .icon {
+    top: 0;
+    opacity: 1;
+   }
+
+   .css-1mk9mw3-MuiList-root {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;}
+    
+  
