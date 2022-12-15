@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Passers } from "prop-passer";
 import {
   FacebookShareButton,
   
@@ -20,24 +19,11 @@ class SubShare extends Component {
 
   render() {
 
-    const {
-      url = String(window.location),
-      title = "Agustin",
-      shareImage = "https://www.localhost:3000",
-      size = "2.5rem",
-    } = this.props;
 
-    const ShareList = Passers({
-      url,
-      className: "network__share-button",
-    })({
-      className: "network cursor-pointer hover transition--default",
-      title: `Share ${String(window.location)}`,
-    })("li");
 
     return (
      
-        <ShareList>
+<>
           <FacebookShareButton
             quote={title}
           >
@@ -65,7 +51,7 @@ class SubShare extends Component {
           >
             <PinterestIcon size={size} />
           </PinterestShareButton>
-        </ShareList>
+       </> 
      
     );
   }
