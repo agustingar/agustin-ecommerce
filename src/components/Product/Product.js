@@ -15,7 +15,7 @@ import  './Product.css';
 import { useStateValue} from "../../StateProvider"
 import { Favorite } from '@mui/icons-material/';
 import Popup from 'reactjs-popup';
-import SubShare from './Share';
+
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -71,16 +71,7 @@ const addToFav = () => {
   })
 }
 
-const shareData = async () => {
-  try {
-      await alert.share({
-          message:
-              'This is the demo text',
-      });
-  } catch (error) {
-      alert(error.message);
-  }
-};
+
   return (
     
     <Card sx={{ maxWidth: 345 }}>
@@ -123,7 +114,7 @@ const shareData = async () => {
         <IconButton>
           <Popup trigger={ <ShareIcon /> }position="  bottom bottom" >
     
- <SubShare/>
+
   </Popup>
         </IconButton>
        
