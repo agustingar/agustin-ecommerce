@@ -95,6 +95,7 @@ export default function SignIn() {
 
 
   return (
+    <>
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -141,7 +142,7 @@ export default function SignIn() {
               label="Remember me"
             />
            
-            <h3  className='or'  >Or signing with:</h3>
+            <h3  className='or'>Or signing with:</h3>
             <Button
         onClick={handleGoogleSignin}
         className="bg-slate-50 hover:bg-slate-200 text-black  shadow rounded border-2 border-gray-300 py-2 px-4 w-full"
@@ -175,5 +176,6 @@ export default function SignIn() {
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
+    </>
   );
 }

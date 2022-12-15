@@ -1,11 +1,11 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Product from './Product'
 import products from '../../product-data';
 import './Product.css';
 import { v4 as uuidv4 } from 'uuid';
-import SearchBar from './SearchBar';
+
 
 
 
