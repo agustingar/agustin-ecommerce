@@ -12,9 +12,9 @@ import { AddShoppingCart } from '@mui/icons-material';
 
 
 export default function FavoriteCard(
-    { product:{id, name, price,productType, image,description}}) {
+    { product: { id, name, price, productType, image, description } }) {
 
-    const [{favorite},dispatch] = useStateValue();
+    const [{ favorite }, dispatch] = useStateValue();
 
     const removeItem = () => dispatch({
         type: "REMOVE_FAV_ITEM",
@@ -23,17 +23,17 @@ export default function FavoriteCard(
 
     const addToBasket = () => {
         dispatch({
-          type: "ADD_TO_BASKET",
-          item:{
-            id,
-            name,
-            productType,
-            image,
-            price,
-            description,
-          }
+            type: "ADD_TO_BASKET",
+            item: {
+                id,
+                name,
+                productType,
+                image,
+                price,
+                description,
+            }
         })
-      }
+    }
 
     return (
         <Card sx={{ maxWidth: 345 }}>
@@ -46,7 +46,7 @@ export default function FavoriteCard(
                     <Typography
                         variant='h5'
                         color='textSecondary'
-                  >
+                    >
                         {price}{'€'}
                     </Typography>
                 }
@@ -57,19 +57,19 @@ export default function FavoriteCard(
                 component="img"
                 height="194"
                 image={image}
-title={name}
-/>
+                title={name}
+            />
 
             <CardActions disableSpacing
-            display='flex'
-            justifyContent='space-between'
-            textAlign='center' >
+                display='flex'
+                justifyContent='space-between'
+                textAlign='center' >
 
-  <IconButton aria-label="Add to Cart" onClick={addToBasket} >
-          <AddShoppingCart />
-        </IconButton>
+                <IconButton aria-label="Add to Cart" onClick={addToBasket} >
+                    <AddShoppingCart />
+                </IconButton>
                 <IconButton>
-                    <DeleteIcon  onClick={removeItem}/>
+                    <DeleteIcon onClick={removeItem} />
                 </IconButton>
 
 
